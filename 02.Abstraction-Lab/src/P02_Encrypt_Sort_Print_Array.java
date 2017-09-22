@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class P02_Encrypt_Sort_Print_Array {
@@ -29,8 +31,19 @@ public class P02_Encrypt_Sort_Print_Array {
            String name = lines[i];
             int stringLength = name.length();
             int sumName = 0;
+            List<Character> vocals = new ArrayList<>();
+            vocals.add('a');
+            vocals.add('A');
+            vocals.add('e');
+            vocals.add('E');
+            vocals.add('i');
+            vocals.add('I');
+            vocals.add('o');
+            vocals.add('O');
+            vocals.add('u');
+            vocals.add('U');
             for (int j = 0; j <name.length() ; j++) {
-                if (name.charAt(j) == 'a' ||name.charAt(j) == 'e'||name.charAt(j) == 'i'||name.charAt(j) == 'o'||name.charAt(j) == 'u' ){
+                if (vocals.contains( name.charAt(j))){
                     sumName +=   name.charAt(j)*stringLength;
                 }
                 else {
